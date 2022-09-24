@@ -18,7 +18,6 @@ import AddProcedurePage from './content/AddProcedurePage';
 import ManageProcedurePage from './content/ManageProcedurePage';
 import ViewProcedures from './content/ViewProcedures';
 
-
 // class App extends Component {
 //   render() {
 //     return (
@@ -77,36 +76,56 @@ const OrchestrationStudioComponent = () => {
   return <OrchestrationStudio />;
 };
 
-const AddModelGroupPageComponent  = () => {
+const AddModelGroupPageComponent = () => {
   return <AddModelGroupPage />;
 };
-const ViewModelGroupComponent  = () => {
+const ViewModelGroupComponent = () => {
   return <ViewModelGroup />;
 };
-const ManageModelGroupPageComponent  = () => {
+const ManageModelGroupPageComponent = () => {
   return <ManageModelGroupPage />;
 };
-const AddProcedurePageComponent  = () => {
+const AddProcedurePageComponent = () => {
   return <AddProcedurePage />;
 };
-const ManageProcedurePageComponent  = () => {
+const ManageProcedurePageComponent = () => {
   return <ManageProcedurePage />;
 };
 const ViewProceduresComponent = () => {
   return <ViewProcedures />;
 };
 
-
 const App = () => {
   let routes = useRoutes([
     { path: '/', element: <LandingPageComponent /> },
-    { path: 'OrchestrationStudio', element: <OrchestrationStudioComponent /> },
-    { path: '/OrchestrationStudio/AddModelGroupPage', element: <AddModelGroupPageComponent /> },
-    { path: '/OrchestrationStudio/ViewModelGroup', element: <ViewModelGroupComponent /> },
-    { path: '/OrchestrationStudio/ManageModelGroupPage', element: <ManageModelGroupPageComponent /> },
-    { path: '/OrchestrationStudio/AddProcedurePage', element: <AddProcedurePageComponent /> },
-    { path: '/OrchestrationStudio/ManageProcedurePage', element: <ManageProcedurePageComponent /> },
-    { path: '/OrchestrationStudio/ViewProcedures', element: <ViewProceduresComponent /> },
+    {
+      path: 'OrchestrationStudio/*',
+      element: <OrchestrationStudioComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/AddModelGroupPage',
+      element: <AddModelGroupPageComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/ViewModelGroup',
+      element: <ViewModelGroupComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/ManageModelGroupPage',
+      element: <ManageModelGroupPageComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/AddProcedurePage',
+      element: <AddProcedurePageComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/ManageProcedurePage',
+      element: <ManageProcedurePageComponent />,
+    },
+    {
+      path: '/OrchestrationStudio/ViewProcedures',
+      element: <ViewProceduresComponent />,
+    },
     // ...
   ]);
   return routes;
