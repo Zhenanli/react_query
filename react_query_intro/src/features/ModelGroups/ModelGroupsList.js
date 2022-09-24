@@ -23,6 +23,10 @@ const batchActionClick = (selectedRows)=>{
 
 }
 
+const handleSelectAll = selectAll => () => {
+    selectAll();
+}
+
 const action = (s) =>{
 
 }
@@ -91,80 +95,63 @@ const ModelGroupsList = () => {
     })
 
     let content
+    let modelGroupTable
     if (isLoading) {
-        content = <p>Loading...</p>
+        modelGroupTable = <p>Loading...</p>
+        content = modelGroupTable
     } else if (isError) {
-        content = <p>{error.message}</p>
-    } else {
-        content = ()=> {
-            modelGroupRows={ModelGroups}.map((ModelGroup, index) => (
-                <tr key={index}>
-                    <td>{ModelGroup}</td>
-                    <td>'28/8/2022'</td>
-                    <td>'seema'</td>
-                </tr>
-           ))
-            }
-        // content = ()=> {
-        // return (
-        //     <DataTable
-        //         rows={ModelGroups.map((ModelGroup, index) => (
-        //             <tr key={index}>
-        //                 <td>'a'</td>
-        //                 <td>{ModelGroup}</td>
-        //                 <td>'28/8/2022'</td>
-        //                 <td>'seema'</td>
-        //             </tr>
-        //        ))}
-        //         headers={headers}
-        //         render={({
-        //             rows,
-        //             headers,
-        //             getHeaderProps,
-        //             // getSelectionProps,
-        //             // selectAll,
-        //         }) => (
-        //             <React.Fragment>
-        //             {/* <Button onClick={this.handleSelectAll(selectAll)}>
-        //                 Seleact All
-        //             </Button> */}
-        //             <TableContainer title="MANAGE MODEL GROUPS ">
-        //                 <Table>
-        //                 <TableHead>
-        //                     <TableRow>
-        //                     {headers.map(header => (
-        //                         <TableHeader {...getHeaderProps({ header })}>
-        //                         {header.header}
-        //                         </TableHeader>
-        //                     ))}
-        //                     <TableHeader />
-        //                     </TableRow>
-        //                 </TableHead>
-        //                 <TableBody>
-        //                     {rows.map(row => (
-        //                     <TableRow key={row.id}>
-        //                         {row.cells.map(cell => (
-        //                         <TableCell key={cell.id}>{cell.value}</TableCell>
-        //                         ))}
-        //                     </TableRow>
-        //                     ))}
-        //                 </TableBody>
-        //                 </Table>
-        //             </TableContainer>
-        //             </React.Fragment>
-        //         )}
-        //     />
-        // );
-        // }
-        // content = <ViewModelGroup />
-    };
-
+        modelGroupTable = <p>{error.message}</p>
+        content = modelGroupTable
+    } 
+    else 
+    {        
+        modelGroupTable = <DataTable
+        rows={initialRows}
+        headers={headers}
+        render={({
+          rows,
+          headers,
+          getHeaderProps,
+          getSelectionProps,
+          selectAll,
+        }) => (
+          <React.Fragment>
+            <Button onClick={this.handleSelectAll(selectAll)}>
+              Seleact All
+            </Button>
+            <TableContainer title="MANAGE MODEL GROUPS ">
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableSelectAll {...getSelectionProps()} />
+                    {headers.map(header => (
+                      <TableHeader {...getHeaderProps({ header })}>
+                        {header.header}
+                      </TableHeader>
+                    ))}
+                    <TableHeader />
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map(row => (
+                    <TableRow key={row.id}>
+                      <TableSelectRow {...getSelectionProps({ row })} />
+                      {row.cells.map(cell => (
+                        <TableCell key={cell.id}>{cell.value}</TableCell>
+                      ))}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </React.Fragment>
+        )}
+      />
+    }    
     return (
         <div>
             {content}
-            {ModelGroups}
-            <ViewModelGroup />            
-            {modelGroupRows}
+            {<ViewModelGroup />}
         </div>
     )
 }
