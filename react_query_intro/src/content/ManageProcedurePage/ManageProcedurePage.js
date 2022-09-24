@@ -18,7 +18,7 @@ import { InfoSection, InfoCard } from '../../components/Info';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { Form, Stack, TextInput } from '@carbon/react';
 import './_manage-procedure-page.scss';
-import ViewProcedures from '../../content/ViewProcedures';
+import ObjectList from '../../features/Objects/ObjectList';
 
 class ManageProcedurePage extends Component {
   render() {
@@ -36,7 +36,7 @@ class ManageProcedurePage extends Component {
               </h1>
             </Column>
           </Grid>
-          <ViewProcedures />
+          <ObjectList />
         </Theme>
         <Content>
           <Button kind="primary" tabIndex={0} type="submit">

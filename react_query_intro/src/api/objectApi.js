@@ -1,24 +1,24 @@
 import axios from "axios"
 
-const todosApi = axios.create({
-    baseURL: "http://localhost:3500"
+const objectsApi = axios.create({
+    baseURL: "https://0ffbf397-9bc4-4e51-a6e9-f079df33d632.mock.pstmn.io"
 })
 
-export const getTodos = async () => {
-    const response = await todosApi.get("/todos")
+export const getObjects = async () => {
+    const response = await objectsApi.get("/objects")
     return response.data
 }
 
-export const addTodo = async (todo) => {
-    return await todosApi.post("/todos", todo)
+export const addObject = async (object) => {
+    return await objectsApi.post("/objects", object)
 }
 
-export const updateTodo = async (todo) => {
-    return await todosApi.patch(`/todos/${todo.id}`, todo)
+export const updateObject = async (object) => {
+    return await objectsApi.patch(`/objects/${object.id}`, object)
 }
 
-export const deleteTodo = async ({ id }) => {
-    return await todosApi.delete(`/todos/${id}`, id)
+export const deleteObject = async ({ id }) => {
+    return await objectsApi.delete(`/objects/${id}`, id)
 }
 
-export default todosApi 
+export default objectsApi 
