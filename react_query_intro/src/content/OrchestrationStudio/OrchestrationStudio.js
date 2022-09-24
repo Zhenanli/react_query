@@ -17,21 +17,15 @@ class OrchestrationStudio extends Component {
           <OrchestratorStudioHeader />
           <Content>
             <Routes>
+              <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> />
               <Route
-                path="/OrchestrationStudio/AddModelGroupPage"
-                component={AddModelGroupPage}
+                path="/ManageModelGroupPage"
+                element=<ManageModelGroupPage />
               />
+              <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
               <Route
-                path="/OrchestrationStudio/ManageModelGroupPage"
-                component={ManageModelGroupPage}
-              />
-              <Route
-                path="/OrchestrationStudio/AddProcedurePage"
-                component={AddProcedurePage}
-              />
-              <Route
-                path="/OrchestrationStudio/ManageProcedurePage"
-                component={ManageProcedurePage}
+                path="/ManageProcedurePage"
+                element=<ManageProcedurePage />
               />
             </Routes>
           </Content>
