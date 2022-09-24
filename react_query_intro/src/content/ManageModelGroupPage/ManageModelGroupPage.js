@@ -4,6 +4,7 @@ import { Content, Theme } from '@carbon/react';
 import { Route, Switch } from 'react-router-dom';
 
 import ViewModelGroup from '../../content/ViewModelGroup';
+import ModelGroupsList from '../../features/ModelGroups/ModelGroupsList';
 import {
   Link,
   Breadcrumb,
@@ -104,7 +105,7 @@ class ManageModelGroupPage extends Component {
               </h1>
             </Column>
           </Grid>
-          <ViewModelGroup />
+          <ModelGroupsList />
         </Theme>
         <Content>
           <Button kind="primary" tabIndex={0} type="submit">

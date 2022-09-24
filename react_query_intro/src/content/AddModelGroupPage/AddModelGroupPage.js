@@ -18,6 +18,13 @@ import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { Form, Stack, TextInput } from '@carbon/react';
 import './_add-model-group-page.scss';
 
+import { useQuery, useMutation, useQueryClient } from "react-query"
+import { addModelGroup } from "../../api/modelGroupApi"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons"
+import { useState } from 'react'
+
 class AddModelGroupPage extends Component {
   render() {
     return (
@@ -46,7 +53,7 @@ class AddModelGroupPage extends Component {
                     labelText="Model Group Description:"
                     placeholder="ModelGroup1 will be added to add model and flow details!"
                   />
-                  <Button kind="primary" tabIndex={0} type="create_model_group">
+                  <Button className="CreateModelGroup" kind="primary" tabIndex={0} type="create_model_group" >
                     Create Model Group
                   </Button>
                 </Stack>

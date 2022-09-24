@@ -19,7 +19,6 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AppWrapper />
-
       <ReactQueryDevtools initialIsOpen />
     </QueryClientProvider>
   </React.StrictMode>

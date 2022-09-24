@@ -3,6 +3,8 @@ import { Button, DataTable } from '@carbon/react';
 import { iconDownload, iconEdit, iconOpen } from '@carbon/icons';
 import './_view-model-group.scss';
 
+import modelGroupRows from '../../features/ModelGroups/ModelGroupsList';
+
 //import { action } from '@storybook/addon-actions';
 const {
   TableContainer,
@@ -27,19 +29,19 @@ const {
 const initialRows = [
   {
     id: 'a',
-    modelGroupName: 'Model Group 1',
+    modelGroupName: 'Model Group1',
     createdDate: '26/8/2022',
     savedBy: 'Seema',
   },
   {
     id: 'b',
-    modelGroupName: 'Model Group 2',
+    modelGroupName: 'Model Group2',
     createdDate: '27/8/2022',
     savedBy: 'Seema',
   },
   {
     id: 'c',
-    modelGroupName: 'Model Group 3',
+    modelGroupName: 'Model Group3',
     createdDate: '28/8/2022',
     savedBy: 'Seema',
   },

@@ -235,9 +235,9 @@ const ObjectList = () => {
     return (
         <div>
             {/* <h1>Object List</h1> */}
-            {newItemSection}
+            {/*newItemSection*/}
             {content}
-            {objects}
+            {/*objects*/}
         </div>
     )
 }
