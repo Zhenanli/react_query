@@ -3,18 +3,21 @@
     {
         "id": "Model Group1",
         "modelGroupName": "Model Group1",
+        "modelGroupDesc": "Model Group1 for Asset1",
         "createdDate": "26/8/2022",
         "savedBy": "Seema"
     },
     {
         "id": "Model Group2",
         "modelGroupName": "Model Group2",
+        "modelGroupDesc": "Model Group2 for Asset1",
         "createdDate": "26/8/2022",
         "savedBy": "Seema"
     },
     {
         "id": "Model Group3",
         "modelGroupName": "Model Group3",
+        "modelGroupDesc": "Model Group3 for Asset1",
         "createdDate": "26/8/2022",
         "savedBy": "Seema"
     }

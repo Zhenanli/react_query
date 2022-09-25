@@ -18,7 +18,12 @@ export const updateModelGroup = async (model_group) => {
 }
 
 export const deleteModelGroup = async ({ model_group_id }) => {
-    return await modelGroupApi.delete(`/ModelGroups/${model_group_id}`,model_group_id);
+    return await modelGroupApi.delete('/ModelGroups/${model_group_id}',model_group_id);
+}
+
+export const getModelGroup = async ({ model_group_id }) => {
+    const response = await modelGroupApi.get('/ModelGroups/${ model_group_id }');
+    return response.data
 }
 
 // const modelGroupApi = axios.create({
@@ -28,6 +33,11 @@ export const deleteModelGroup = async ({ model_group_id }) => {
 
 // export const getModelGroups = async () => {
 //     const response = await modelGroupApi.get("/ar-model-library/model-groups")
+//     return response.data
+// }
+
+// export const getModelGroup = async () => {
+//     const response = await modelGroupApi.get("/models/model_groups/:model-group-id")
 //     return response.data
 // }
 

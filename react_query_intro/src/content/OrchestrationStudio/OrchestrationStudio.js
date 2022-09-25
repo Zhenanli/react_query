@@ -8,6 +8,7 @@ import AddModelGroupPage from '../../content/AddModelGroupPage';
 import ManageModelGroupPage from '../../content/ManageModelGroupPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
 import ManageObjectsPage from '../ManageObjectsPage';
+import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
 
 class OrchestrationStudio extends Component {
   render() {
@@ -17,13 +18,8 @@ class OrchestrationStudio extends Component {
           <OrchestratorStudioHeader />
           <Content>
             <Routes>
-              <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> />
-              <Route
-                path="/ManageModelGroupPage"
-                element=<ManageModelGroupPage />
-              />
-              <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
-
+              <Route path="/NewModelGroup" element=<NewModelGroup /> /> 
+              <Route path="/ManageModelGroupPage" element=<ManageModelGroupPage /> />
               <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
             </Routes>

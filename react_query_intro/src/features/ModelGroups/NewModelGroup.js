@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
-import { getModelGroups,addModelGroup,updateModelGroup,deleteModelGroup } from "../../api/modelGroupApi"
+import { addModelGroup, getModelGroup } from "../../api/modelGroupApi"
 
 import { useState } from 'react'
 
@@ -15,42 +15,42 @@ import { Button, DataTable, Form, Stack, TextInput,TableContainer,TableToolbar,T
     Column} from '@carbon/react';
 
 import{TrashCan16, Save16, Download16} from '@carbon/icons'
+const batchActionClick = (selectedRows)=>{}
 
-// import '../..content/ViewProcedures/_view-procedures.scss';
-
-const batchActionClick = (selectedRows)=>{
-
-}
-
-const action = (s) =>{
-
-}
+const action = (s) =>{}
 
 const NewModelGroup = () => {
     const [newModelGroupName, setNewModelGroupName] = useState('')
-    const [newModelGroupDescription, setNewModelGroupDesc] = useState('')
+    const [newModelGroupDesc, setNewModelGroupDesc] = useState('')
     const queryClient = useQueryClient()
 
-    const {
-        isLoading,
-        isError,
-        error,
-        data: ModelGroup
-    } = useQuery('ModelGroup', getModelGroups, {
-        select: data => data.sort((a) => a.id)
-    })
+    const {isLoading,isError,error, data: ModelGroup} = useQuery(
+        'ModelGroup', 
+        getModelGroup, 
+        {
+            select: data => data.sort((a) => a.id)
+        })
 
     const addModelGroupMutation = useMutation(addModelGroup, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroup")
+            queryClient.invalidateQueries("ModelGroups")
         }
     })
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addModelGroupMutation.mutate({ ModelGroup: 1, title: newModelGroupName, completed: false })
+        addModelGroupMutation.mutate(
+            { 
+                id: newModelGroupName,
+                modelGroupName: newModelGroupName,
+                modelGroupDesc: newModelGroupDesc,
+                createdDate: '25/9/2022',
+                savedBy: 'IBM Orchestrator',
+            }
+        )
         setNewModelGroupName('')
+        setNewModelGroupDesc('')
     }
 
     const newModelGroupSelection = (
@@ -80,7 +80,7 @@ const NewModelGroup = () => {
                         id="model_description"
                         invalidText="Invalid error message."
                         labelText="Model Group Description:"
-                        value={newModelGroupDescription}
+                        value={newModelGroupDesc}
                         onChange={(e) => setNewModelGroupDesc(e.target.value)}
                         placeholder="ModelGroup1 will be added to add model and flow details!"
                         />
@@ -94,42 +94,11 @@ const NewModelGroup = () => {
             </Column>
             </Grid>
         </Form>
-      )
-
-    let content
-    if (isLoading) {
-        content = <p>Loading...</p>
-    } else if (isError) {
-        content = <p>{error.message}</p>
-    } else {
-        content = ()=> {
-        return(
-                // <article key={object.id}>
-                //     <div className="object">
-                //         <input
-                //             type="checkbox"
-                //             checked={object.completed}
-                //             id={object.id}
-                //             onChange={() =>
-                //                 updateObjectMutation.mutate({ ...object, completed: !object.completed })
-                //             }
-                //         />
-                //         <label htmlFor={object.id}>{object.title}</label>
-                //     </div>
-                //     <button className="trash" onClick={() => deleteObjectMutation.mutate({ id: object.id })}>
-                //         <FontAwesomeIcon icon={faTrash} />
-                //     </button>
-                // </article>
-                <div>
-                    {ModelGroup}
-                </div>
-        )};
-    };
+      )  
 
     return (
         <div>
-            {content}            
-            {ModelGroup}
+            {newModelGroupSelection}
         </div>
     )
 }

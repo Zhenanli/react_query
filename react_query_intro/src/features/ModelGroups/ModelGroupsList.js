@@ -56,6 +56,10 @@ const headers = [
       header: 'ModelGroupName',
     },
     {
+        key: 'modelGroupDesc',
+        header: 'ModelGroupDesc',
+    },
+    {
       key: 'createdDate',
       header: 'CreatedDate',
     },
@@ -118,7 +122,7 @@ const headers = [
             onInputChange,
             selectedRows,
             }) => (
-            <TableContainer title="Current Available Model Groups">
+            <TableContainer>
                 <TableToolbar>
                 <TableBatchActions {...getBatchActionProps()}>
                     <TableBatchAction
