@@ -9,16 +9,16 @@ export const getModelGroups = async () => {
     return response.data
 }
 
-export const addModelGroup = async (model_group) => {
+export const addModelGroup = async model_group => {
     return await modelGroupApi.post('/ModelGroups', model_group);
 }
 
-export const updateModelGroup = async (model_group) => {
-    return await modelGroupApi.patch('/ModelGroups/${model_group.id}', model_group);
+export const updateModelGroup = async model_group => {
+    return await modelGroupApi.patch('/ModelGroups/${model_group}', model_group);
 }
 
-export const deleteModelGroup = async ({ model_group_id }) => {
-    return await modelGroupApi.delete('/ModelGroups/${model_group_id}',model_group_id);
+export const deleteModelGroup = async model_group => {
+    return await modelGroupApi.delete('/ModelGroups/${model_group.id}',model_group);
 }
 
 export const getModelGroup = async ({ model_group_id }) => {

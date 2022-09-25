@@ -18,8 +18,9 @@ class OrchestrationStudio extends Component {
           <OrchestratorStudioHeader />
           <Content>
             <Routes>
-              <Route path="/NewModelGroup" element=<NewModelGroup /> /> 
+              <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> /> 
               <Route path="/ManageModelGroupPage" element=<ManageModelGroupPage /> />
+              <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
             </Routes>
