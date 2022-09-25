@@ -1,36 +1,54 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
-import { getModelGroups,updateModelGroup,deleteModelGroup } from "../../api/modelGroupApi"
-import ViewModelGroup from '../../content/ViewModelGroup';
+import { 
+    getModelGroups,
+    updateModelGroup,
+    deleteModelGroup 
+} from "../../api/modelGroupApi"
 
-import { useState } from 'react'
+import { useState } from 'react';
 
 import React from 'react';
-import { Button, DataTable, Form, Stack, TextInput,TableContainer,TableToolbar,TableBody,TableToolbarMenu,TableBatchAction,TableBatchActions,TableToolbarAction,TableToolbarContent,TableToolbarSearch, Table,
-    TableHead,
-    TableRow,
-    TableCell,
-    TableHeader,
-    TableSelectAll,
-    TableSelectRow,
-    Grid,
-    Column} from '@carbon/react';
+import {
+  Button,
+  DataTable,
+  Form,
+  Stack,
+  TextInput,
+  // TableContainer, TableToolbar, TableBody, TableToolbarMenu, TableBatchAction, TableBatchActions, TableToolbarAction, TableToolbarContent, TableToolbarSearch, Table,
+  // TableHead,
+  // TableRow,
+  // TableCell,
+  // TableHeader,
+  // TableSelectAll,
+  // TableSelectRow
+} from '@carbon/react';
 
-import{TrashCan16, Save16, Download16} from '@carbon/icons'
+import { TrashCan, Save, Edit } from '@carbon/icons-react';
 
 // import '../..content/ViewProcedures/_view-procedures.scss';
 
-const batchActionClick = (selectedRows)=>{
+const {
+  Table,
+  TableBatchAction,
+  TableBatchActions,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableExpandHeader,
+  TableExpandRow,
+  TableExpandedRow,
+  TableHead,
+  TableHeader,
+  TableRow,
+  TableSelectAll,
+  TableSelectRow,
+  TableToolbar,
+  TableToolbarAction,
+  TableToolbarContent,
+  TableToolbarSearch,
+} = DataTable;
 
-}
-
-const handleSelectAll = selectAll => () => {
-    selectAll();
-}
-
-const action = (s) =>{
-
-}
-var modelGroupRows = [];
+const action = s => {};
 
 const headers = [
     {
@@ -47,112 +65,115 @@ const headers = [
     },
   ];
 
-  const initialRows = [
-    {
-      id: 'a',
-      modelGroupName: 'Model Group 1',
-      createdDate: '26/8/2022',
-      savedBy: 'Seema',
-    },
-    {
-      id: 'b',
-      modelGroupName: 'Model Group 2',
-      createdDate: '27/8/2022',
-      savedBy: 'Seema',
-    },
-    {
-      id: 'c',
-      modelGroupName: 'Model Group 3',
-      createdDate: '28/8/2022',
-      savedBy: 'Seema',
-    },
-  ];
-
-const ModelGroupsList = () => {
+  const ModelGroupsList = () => {
     const queryClient = useQueryClient()
 
-    const {
-        isLoading,
-        isError,
-        error,
-        data: ModelGroups
-    } = useQuery('ModelGroup', getModelGroups, {
+    const {isLoading,isError,error, data: ModelGroups} = useQuery(
+    'ModelGroups', 
+    getModelGroups, 
+    {
         select: data => data.sort((a) => a.id)
     })
 
     const updateModelGroupMutation = useMutation(updateModelGroup, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroup")
+            queryClient.invalidateQueries("ModelGroups")
         }
     })
 
     const deleteModelGroupMutation = useMutation(deleteModelGroup, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroup")
+            queryClient.invalidateQueries("ModelGroups")
         }
-    })
+    })    
 
-    let content
-    let modelGroupTable
+    const batchActionOpenClick = selectedRows => {
+        console.log('open clicked', selectedRows);
+    };
+    const batchActionEditClick = selectedRows => {
+        console.log('Edit clicked', selectedRows);
+    };
+    const batchActionDeleteClick = selectedRows => {
+        console.log('Delete clicked', selectedRows);
+    };
+
+    let modelGroupTable;
     if (isLoading) {
-        modelGroupTable = <p>Loading...</p>
-        content = modelGroupTable
+        modelGroupTable = <p>Loading...</p>;
     } else if (isError) {
-        modelGroupTable = <p>{error.message}</p>
-        content = modelGroupTable
-    } 
-    else 
-    {        
-        modelGroupTable = <DataTable
-        rows={initialRows}
-        headers={headers}
-        render={({
-          rows,
-          headers,
-          getHeaderProps,
-          getSelectionProps,
-          selectAll,
-        }) => (
-          <React.Fragment>
-            <Button onClick={this.handleSelectAll(selectAll)}>
-              Seleact All
-            </Button>
-            <TableContainer title="MANAGE MODEL GROUPS ">
-              <Table>
+        modelGroupTable = <p>{error.message}</p>;
+    } else {
+        modelGroupTable = (
+        <DataTable
+            rows={ModelGroups}
+            headers={headers}
+            render={({
+            rows,
+            headers,
+            getHeaderProps,
+            getSelectionProps,
+            getBatchActionProps,
+            onInputChange,
+            selectedRows,
+            }) => (
+            <TableContainer title="Current Available Model Groups">
+                <TableToolbar>
+                <TableBatchActions {...getBatchActionProps()}>
+                    <TableBatchAction
+                    renderIcon={Save}
+                    onClick={batchActionOpenClick(selectedRows)}>
+                    Open
+                    </TableBatchAction>
+                    <TableBatchAction
+                    renderIcon={Edit}
+                    onClick={batchActionEditClick(selectedRows)}>
+                    Edit
+                    </TableBatchAction>
+                    <TableBatchAction
+                    renderIcon={TrashCan}
+                    onClick={batchActionDeleteClick(selectedRows)}>
+                    Delete
+                    </TableBatchAction>
+                </TableBatchActions>
+                <TableToolbarSearch onChange={onInputChange} />
+                <TableToolbarContent>
+                    <TableToolbarAction iconName="edit" iconDescription="Edit" />
+                </TableToolbarContent>
+                </TableToolbar>
+                <Table>
                 <TableHead>
-                  <TableRow>
+                    <TableRow>
                     <TableSelectAll {...getSelectionProps()} />
-                    {headers.map(header => (
-                      <TableHeader {...getHeaderProps({ header })}>
+                    {headers.map((header, i) => (
+                        <TableHeader key={i} {...getHeaderProps({ header })}>
                         {header.header}
-                      </TableHeader>
+                        </TableHeader>
                     ))}
-                    <TableHeader />
-                  </TableRow>
+                    </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows.map(row => (
+                    {rows.map(row => (
                     <TableRow key={row.id}>
-                      <TableSelectRow {...getSelectionProps({ row })} />
-                      {row.cells.map(cell => (
+                        <TableSelectRow {...getSelectionProps({ row })} />
+                        {row.cells.map(cell => (
                         <TableCell key={cell.id}>{cell.value}</TableCell>
-                      ))}
+                        ))}
                     </TableRow>
-                  ))}
+                    ))}
                 </TableBody>
-              </Table>
+                </Table>
             </TableContainer>
-          </React.Fragment>
-        )}
-      />
-    }    
+            )}
+        />
+        );
+    }
     return (
         <div>
-            {content}
-            {<ViewModelGroup />}
+            {modelGroupTable}
         </div>
-    )
-}
+    );
+};
 export default ModelGroupsList
+

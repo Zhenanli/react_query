@@ -1,24 +1,24 @@
 {
   "ModelGroups": [
     {
-      "id": "Model Group1",
-      "modelGroupName": "Model Group1",
-      "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+        "id": "Model Group1",
+        "modelGroupName": "Model Group1",
+        "createdDate": "26/8/2022",
+        "savedBy": "Seema"
     },
     {
-      "id": "Model Group2",
-      "modelGroupName": "Model Group2",
-      "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+        "id": "Model Group2",
+        "modelGroupName": "Model Group2",
+        "createdDate": "26/8/2022",
+        "savedBy": "Seema"
     },
     {
-      "id": "Model Group3",
-      "modelGroupName": "Model Group3",
-      "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+        "id": "Model Group3",
+        "modelGroupName": "Model Group3",
+        "createdDate": "26/8/2022",
+        "savedBy": "Seema"
     }
-  ],
+ ],
   "Objects": [
     {
       "id": "Object1",
