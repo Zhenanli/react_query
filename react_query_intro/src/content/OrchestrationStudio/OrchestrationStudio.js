@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import AddModelGroupPage from '../../content/AddModelGroupPage';
 import ManageModelGroupPage from '../../content/ManageModelGroupPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
-import ManageProcedurePage from '../../content/ManageProcedurePage';
+import ManageObjectsPage from '../ManageObjectsPage';
 
 class OrchestrationStudio extends Component {
   render() {
@@ -22,11 +22,10 @@ class OrchestrationStudio extends Component {
                 path="/ManageModelGroupPage"
                 element=<ManageModelGroupPage />
               />
+              <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
+
+              <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
-              <Route
-                path="/ManageProcedurePage"
-                element=<ManageProcedurePage />
-              />
             </Routes>
           </Content>
         </Theme>

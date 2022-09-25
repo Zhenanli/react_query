@@ -17,7 +17,7 @@ import {
 import { InfoSection, InfoCard } from '../../components/Info';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { Form, Stack, TextInput } from '@carbon/react';
-import './_manage-procedure-page.scss';
+import './_manage-objects-page.scss';
 import ObjectList from '../../features/Objects/ObjectList';
 
 class ManageProcedurePage extends Component {
@@ -32,13 +32,13 @@ class ManageProcedurePage extends Component {
               sm={4}
               className="manage-model-group-page__banner">
               <h1 className="manage-model-group-page__heading">
-                Manage Procedures Screen
+                Managing Objects
               </h1>
             </Column>
           </Grid>
           <ObjectList />
         </Theme>
-        <Content>
+        {/* <Content>
           <Button kind="primary" tabIndex={0} type="submit">
             Delete Selected
           </Button>
@@ -48,7 +48,7 @@ class ManageProcedurePage extends Component {
           <Button kind="primary" tabIndex={2} type="submit">
             Open Selected
           </Button>
-        </Content>
+        </Content> */}
       </>
     );
   }
