@@ -53,11 +53,45 @@ const NewModelGroup = () => {
         setNewModelGroupDesc('')
     }
 
+    // const newModelGroupSelection = (
+    //     <Form onSubmit={handleSubmit}>
+    //         <Grid className="add-model-group-page" fullWidth>
+    //         <Column lg={16} md={8} sm={4} className="add-model-group-page__r2">
+    //             <Grid className="add-model-group-page-content">
+    //             <Column md={4} lg={7} sm={4} className="add-model-group-page">
+    //                 <Form onSubmit={handleSubmit}>
+    //                 <Stack gap={7}>
+    //                     <TextInput
+    //                     helperText="Enter Model Group Name (Mandatory)!"
+    //                     id="model_name"
+    //                     invalidText="Invalid error message."
+    //                     labelText="Model Group Name:"
+    //                     value={newModelGroupName}
+    //                     onChange={(e) => setNewModelGroupName(e.target.value)}
+    //                     placeholder="ModelGroup1"
+    //                     />
+    //                     <TextInput
+    //                     helperText="Enter Model Group Description!"
+    //                     id="model_description"
+    //                     invalidText="Invalid error message."
+    //                     labelText="Model Group Description:"
+    //                     value={newModelGroupDesc}
+    //                     onChange={(e) => setNewModelGroupDesc(e.target.value)}
+    //                     placeholder="ModelGroup1 will be added to add model and flow details!"
+    //                     />
+    //                     <Button className="submit" kind="primary" tabIndex={0} type="create_model_group" >
+    //                     Create Model Group
+    //                     </Button>
+    //                 </Stack>
+    //                 </Form>
+    //             </Column>
+    //             </Grid>
+    //         </Column>
+    //         </Grid>
+    //     </Form>
+    //   ) 
     const newModelGroupSelection = (
-        <Form onSubmit={handleSubmit}>
-            <Grid className="add-model-group-page" fullWidth>
-            <Column lg={16} md={8} sm={4} className="add-model-group-page__r2">
-                <Grid className="add-model-group-page-content">
+        <Grid className="add-model-group-page-content">
                 <Column md={4} lg={7} sm={4} className="add-model-group-page">
                     <Form onSubmit={handleSubmit}>
                     <Stack gap={7}>
@@ -79,17 +113,14 @@ const NewModelGroup = () => {
                         onChange={(e) => setNewModelGroupDesc(e.target.value)}
                         placeholder="ModelGroup1 will be added to add model and flow details!"
                         />
-                        <Button className="CreateModelGroup" kind="primary" tabIndex={0} type="create_model_group" >
+                        <Button className="submit" kind="primary" tabIndex={0} >
                         Create Model Group
                         </Button>
                     </Stack>
                     </Form>
                 </Column>
                 </Grid>
-            </Column>
-            </Grid>
-        </Form>
-      )  
+      )   
 
     return (
         <div>
