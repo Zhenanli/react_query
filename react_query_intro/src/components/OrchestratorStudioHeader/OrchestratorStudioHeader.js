@@ -96,12 +96,10 @@ class OrchestratorStudioHeader extends Component {
               </SideNavMenuItem>
             </SideNavMenu>
             <SideNavMenu title="Procedure Library">
-              <SideNavMenuItem href="/OrchestrationStudio/AddProcedurePage">
-                Create Procedure
+              <SideNavMenuItem href="/OrchestrationStudio/ManageObjectsPage">
+                Manage Objects
               </SideNavMenuItem>
-              <SideNavMenuItem href="/OrchestrationStudio/ManageProcedurePage">
-                Manage Procedure
-              </SideNavMenuItem>
+              <SideNavMenuItem href="#">Manage Procedures</SideNavMenuItem>
             </SideNavMenu>
           </SideNavItems>
         </SideNav>
