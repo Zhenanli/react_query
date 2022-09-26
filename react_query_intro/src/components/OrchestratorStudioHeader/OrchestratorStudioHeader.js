@@ -99,7 +99,9 @@ class OrchestratorStudioHeader extends Component {
               <SideNavMenuItem href="/OrchestrationStudio/ManageObjectsPage">
                 Manage Objects
               </SideNavMenuItem>
-              <SideNavMenuItem href="#">Manage Procedures</SideNavMenuItem>
+              <SideNavMenuItem href="/OrchestrationStudio/ManageProceduresPage">
+                Manage Procedures
+              </SideNavMenuItem>
             </SideNavMenu>
           </SideNavItems>
         </SideNav>

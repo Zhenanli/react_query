@@ -1,10 +1,10 @@
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import {
-  getObjects,
-  addObject,
-  updateObject,
-  deleteObject,
-} from '../../api/objectApi';
+  getProcedures,
+  addProcedure,
+  updateProcedure,
+  deleteProcedure,
+} from '../../api/procedureApi';
 
 import { useState } from 'react';
 
@@ -53,8 +53,8 @@ const action = s => {};
 
 const headers = [
   {
-    key: 'objectName',
-    header: 'ObjectName',
+    key: 'procedureName',
+    header: 'ProcedureName',
   },
   {
     key: 'createdDate',
@@ -66,48 +66,48 @@ const headers = [
   },
 ];
 
-const ObjectList = () => {
-  const [newObject, setNewObject] = useState('');
+const ProcedureList = objectid => {
+  const [newProcedure, setNewProcedure] = useState('');
   const queryClient = useQueryClient();
 
-  const { isLoading, isError, error, data: objects } = useQuery(
-    'objects',
-    getObjects,
+  const { isLoading, isError, error, data: procedures } = useQuery(
+    'procedures',
+    () => getProcedures(objectid),
     {
       select: data => data.sort(a => a.id),
     }
   );
 
-  const addObjectMutation = useMutation(addObject, {
+  const addProcedureMutation = useMutation(addProcedure, {
     onSuccess: () => {
       // Invalidates cache and refetch
-      queryClient.invalidateQueries('objects');
+      queryClient.invalidateQueries('procedures');
     },
   });
 
-  const updateObjectMutation = useMutation(updateObject, {
+  const updateProcedureMutation = useMutation(updateProcedure, {
     onSuccess: () => {
       // Invalidates cache and refetch
-      queryClient.invalidateQueries('objects');
+      queryClient.invalidateQueries('procedures');
     },
   });
 
-  const deleteObjectMutation = useMutation(deleteObject, {
+  const deleteProcedureMutation = useMutation(deleteProcedure, {
     onSuccess: () => {
       // Invalidates cache and refetch
-      queryClient.invalidateQueries('objects');
+      queryClient.invalidateQueries('procedures');
     },
   });
 
   const handleSubmit = e => {
     e.preventDefault();
-    addObjectMutation.mutate({
-      id: newObject,
-      objectName: newObject,
+    addProcedureMutation.mutate({
+      id: newProcedure,
+      procedureName: newProcedure,
       createdDate: Date().toLocaleDateString(),
       savedBy: 'user1',
     });
-    setNewObject('');
+    setNewProcedure('');
   };
 
   const batchActionOpenClick = selectedRows => {
@@ -124,35 +124,35 @@ const ObjectList = () => {
     <Form onSubmit={handleSubmit}>
       <Stack>
         <TextInput
-          id="newObjectName"
+          id="newProcedureName"
           required
-          warnText="Object name required"
+          warnText="Procedure name required"
           invalidText="Invalid error message."
-          labelText="Key in new object name to create new one"
-          value={newObject}
-          onChange={e => setNewObject(e.target.value)}
+          labelText="Key in new procedure name to create new one"
+          value={newProcedure}
+          onChange={e => setNewProcedure(e.target.value)}
         />
         <Button
-          className="newObject-button"
+          className="newProcedure-button"
           kind="primary"
           tabIndex={0}
           type="submit">
-          Create new object
+          Create new procedure
         </Button>
       </Stack>
     </Form>
   );
 
-  let objectTable;
+  let procedureTable;
   if (isLoading) {
-    objectTable = <p>Loading...</p>;
+    procedureTable = <p>Loading...</p>;
   } else if (isError) {
-    objectTable = <p>{error.message}</p>;
+    procedureTable = <p>{error.message}</p>;
   } else {
-    // objectTable = <p> loaded success</p>
-    objectTable = (
+    // procedureTable = <p> loaded success</p>
+    procedureTable = (
       <DataTable
-        rows={objects}
+        rows={procedures}
         headers={headers}
         render={({
           rows,
@@ -163,7 +163,7 @@ const ObjectList = () => {
           onInputChange,
           selectedRows,
         }) => (
-          <TableContainer title="Current Available Objects">
+          <TableContainer title="Current Available Procedures">
             <TableToolbar>
               <TableBatchActions {...getBatchActionProps()}>
                 <TableBatchAction
@@ -220,12 +220,12 @@ const ObjectList = () => {
   }
   return (
     <div>
-      {/* <h1>Object List</h1> */}
+      {/* <h1>Procedure List</h1> */}
 
-      {objectTable}
+      {procedureTable}
       {newItemSection}
-      {/* {objects} */}
+      {/* {procedures} */}
     </div>
   );
 };
-export default ObjectList;
+export default ProcedureList;

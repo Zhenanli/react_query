@@ -7,7 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 import AddModelGroupPage from '../../content/AddModelGroupPage';
 import ManageModelGroupPage from '../../content/ManageModelGroupPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
-import ManageObjectsPage from '../ManageObjectsPage';
+import ManageObjectsPage from '../ManageObjectsPage/ManageObjectsPage';
+import ManageProceduresPage from '../ManageProceduresPage/ManageProceduresPage';
 import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
 
 class OrchestrationStudio extends Component {
@@ -18,10 +19,16 @@ class OrchestrationStudio extends Component {
           <OrchestratorStudioHeader />
           <Content>
             <Routes>
-              <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> /> 
-              <Route path="/ManageModelGroupPage" element=<ManageModelGroupPage /> />
+              <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> />
+              <Route
+                path="/ManageModelGroupPage"
+                element=<ManageModelGroupPage />
+              />
               <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
-              <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
+              <Route
+                path="/ManageProceduresPage"
+                element=<ManageProceduresPage />
+              />
               <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
             </Routes>
           </Content>
