@@ -1,27 +1,34 @@
 {
   "ModelGroups": [
     {
-        "id": "Model Group1",
-        "modelGroupName": "Model Group1",
-        "modelGroupDesc": "Model Group1 for Asset1",
-        "createdDate": "26/8/2022",
-        "savedBy": "Seema"
+      "id": "default",
+      "modelGroupName": "default Model Group1",
+      "modelGroupDesc": "default Model Group1 for Asset1",
+      "createdDate": "26/8/2022",
+      "savedBy": "Seema"
     },
     {
-        "id": "Model Group2",
-        "modelGroupName": "Model Group2",
-        "modelGroupDesc": "Model Group2 for Asset1",
-        "createdDate": "26/8/2022",
-        "savedBy": "Seema"
+      "id": "Model Group1",
+      "modelGroupName": "Model Group1",
+      "modelGroupDesc": "Model Group1 for Asset1",
+      "createdDate": "26/8/2022",
+      "savedBy": "Seema"
     },
     {
-        "id": "Model Group3",
-        "modelGroupName": "Model Group3",
-        "modelGroupDesc": "Model Group3 for Asset1",
-        "createdDate": "26/8/2022",
-        "savedBy": "Seema"
+      "id": "Model Group2",
+      "modelGroupName": "Model Group2",
+      "modelGroupDesc": "Model Group2 for Asset1",
+      "createdDate": "26/8/2022",
+      "savedBy": "Seema"
+    },
+    {
+      "id": "Model Group3",
+      "modelGroupName": "Model Group3",
+      "modelGroupDesc": "Model Group3 for Asset1",
+      "createdDate": "26/8/2022",
+      "savedBy": "Seema"
     }
- ],
+  ],
   "Objects": [
     {
       "id": "Object1",
@@ -57,6 +64,12 @@
       "id": "testObject6",
       "objectName": "testObject6",
       "createdDate": "Sun Sep 25 2022 10:48:50 GMT+0800 (Singapore Standard Time)",
+      "savedBy": "user1"
+    },
+    {
+      "id": "trial",
+      "objectName": "trial",
+      "createdDate": "26/9/2022",
       "savedBy": "user1"
     }
   ],

@@ -104,7 +104,7 @@ const ObjectList = () => {
     addObjectMutation.mutate({
       id: newObject,
       objectName: newObject,
-      createdDate: Date().toLocaleDateString(),
+      createdDate: '26/9/2022',
       savedBy: 'user1',
     });
     setNewObject('');
