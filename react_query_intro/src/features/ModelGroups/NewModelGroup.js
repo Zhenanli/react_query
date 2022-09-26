@@ -70,7 +70,7 @@ const NewModelGroup = () => {
                         onChange={(e) => setNewModelGroupDesc(e.target.value)}
                         placeholder="ModelGroup1 will be added to add model and flow details!"
                         />
-                        <Button className="submit" kind="primary" tabIndex={0} >
+                        <Button className="newObject-button" kind="primary" tabIndex={0} type="submit">
                         Create Model Group
                         </Button>
                     </Stack>
