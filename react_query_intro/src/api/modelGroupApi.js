@@ -9,11 +9,11 @@ export const getModelGroups = async () => {
     return response.data;
   };
   
-  export const addModelGroup = async model_group => {
+  export const addModelGroup = async (model_group) => {
     return await modelGroupApi.post('/ModelGroups', model_group);
   };
   
-  export const updateModelGroup = async model_group => {
+  export const updateModelGroup = async (model_group) => {
     return await modelGroupApi.patch('/ModelGroups/${model_group.id}', model_group);
   };
   

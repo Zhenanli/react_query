@@ -1,6 +1,13 @@
 {
   "ModelGroups": [
     {
+      "id": "default",
+      "modelGroupName": "default Model Group1",
+      "modelGroupDesc": "default Model Group1 for Asset1",
+      "createdDate": "26/8/2022",
+      "savedBy": "Seema"
+    },
+    {
       "id": "Model Group1",
       "modelGroupName": "Model Group1",
       "modelGroupDesc": "Model Group1 for Asset1",
@@ -20,6 +27,13 @@
       "modelGroupDesc": "Model Group3 for Asset1",
       "createdDate": "26/8/2022",
       "savedBy": "Seema"
+    },
+    {
+      "id": "asd",
+      "modelGroupName": "asd",
+      "modelGroupDesc": "ASDFG",
+      "createdDate": "25/9/2022",
+      "savedBy": "IBM Orchestrator"
     }
   ],
   "Objects": [
@@ -423,6 +437,12 @@
       "id": "testObject6",
       "objectName": "testObject6",
       "createdDate": "Sun Sep 25 2022 10:48:50 GMT+0800 (Singapore Standard Time)",
+      "savedBy": "user1"
+    },
+    {
+      "id": "trial",
+      "objectName": "trial",
+      "createdDate": "26/9/2022",
       "savedBy": "user1"
     }
   ]

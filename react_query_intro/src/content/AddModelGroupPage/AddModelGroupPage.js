@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Content, Theme } from '@carbon/react';
 import { Route, Switch } from 'react-router-dom';
 //import ModelGroupRepoPage from '../../content/ModelGroupRepoPage';
 import {
@@ -68,18 +69,35 @@ import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
 // }
 
 class AddModelGroupPage extends Component {
+  // render() {
+  //   return (
+  //     <Grid className="add-model-group-page" fullWidth>
+  //       <Column lg={16} md={8} sm={4} className="add-model-group-page__banner">
+  //         <h1 className="add-model-group-page__heading">
+  //           Model Creation Screen
+  //         </h1>
+  //       </Column>
+  //       <Column lg={16} md={8} sm={4} className="add-model-group-page__r2">
+  //         <NewModelGroup />
+  //       </Column>
+  //     </Grid>
+  //   );
+  // }
   render() {
     return (
-      <Grid className="add-model-group-page" fullWidth>
-        <Column lg={16} md={8} sm={4} className="add-model-group-page__banner">
-          <h1 className="add-model-group-page__heading">
-            Model Creation Screen
-          </h1>
-        </Column>
-        <Column lg={16} md={8} sm={4} className="add-model-group-page__r2">
+      <>
+        <Theme>
+        <Grid className="add-model-group-page" fullWidth>
+            <Column
+              lg={16}
+              md={8}
+              sm={4}
+              className="add-model-group-page__banner">
+            </Column>
+          </Grid>
           <NewModelGroup />
-        </Column>
-      </Grid>
+        </Theme>
+      </>
     );
   }
 }

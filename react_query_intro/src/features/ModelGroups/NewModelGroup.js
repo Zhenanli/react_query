@@ -14,22 +14,14 @@ import { Button, DataTable, Form, Stack, TextInput,TableContainer,TableToolbar,T
     Grid,
     Column} from '@carbon/react';
 
-import{TrashCan16, Save16, Download16} from '@carbon/icons'
-const batchActionClick = (selectedRows)=>{}
-
-const action = (s) =>{}
-
 const NewModelGroup = () => {
     const [newModelGroupName, setNewModelGroupName] = useState('')
     const [newModelGroupDesc, setNewModelGroupDesc] = useState('')
     const queryClient = useQueryClient()
-
-    const {isLoading,isError,error, data: ModelGroup} = useQuery(
-        'ModelGroup', 
-        getModelGroup, 
-        {
-            select: data => data.sort((a) => a.id)
-        })
+    
+    // const id = 'default'
+    // const {isLoading,isError,error, data: default_ModelGroup} = useQuery(["ModelGroups", { id }], (id) =>
+    //     getModelGroup(id))
 
     const addModelGroupMutation = useMutation(addModelGroup, {
         onSuccess: () => {
@@ -39,6 +31,7 @@ const NewModelGroup = () => {
     })
 
     const handleSubmit = (e) => {
+        console.log('handleSubmit clicked')
         e.preventDefault()
         addModelGroupMutation.mutate(
             { 
@@ -51,53 +44,17 @@ const NewModelGroup = () => {
         )
         setNewModelGroupName('')
         setNewModelGroupDesc('')
+        console.log('handleSubmit clicked', e);
     }
 
-    // const newModelGroupSelection = (
-    //     <Form onSubmit={handleSubmit}>
-    //         <Grid className="add-model-group-page" fullWidth>
-    //         <Column lg={16} md={8} sm={4} className="add-model-group-page__r2">
-    //             <Grid className="add-model-group-page-content">
-    //             <Column md={4} lg={7} sm={4} className="add-model-group-page">
-    //                 <Form onSubmit={handleSubmit}>
-    //                 <Stack gap={7}>
-    //                     <TextInput
-    //                     helperText="Enter Model Group Name (Mandatory)!"
-    //                     id="model_name"
-    //                     invalidText="Invalid error message."
-    //                     labelText="Model Group Name:"
-    //                     value={newModelGroupName}
-    //                     onChange={(e) => setNewModelGroupName(e.target.value)}
-    //                     placeholder="ModelGroup1"
-    //                     />
-    //                     <TextInput
-    //                     helperText="Enter Model Group Description!"
-    //                     id="model_description"
-    //                     invalidText="Invalid error message."
-    //                     labelText="Model Group Description:"
-    //                     value={newModelGroupDesc}
-    //                     onChange={(e) => setNewModelGroupDesc(e.target.value)}
-    //                     placeholder="ModelGroup1 will be added to add model and flow details!"
-    //                     />
-    //                     <Button className="submit" kind="primary" tabIndex={0} type="create_model_group" >
-    //                     Create Model Group
-    //                     </Button>
-    //                 </Stack>
-    //                 </Form>
-    //             </Column>
-    //             </Grid>
-    //         </Column>
-    //         </Grid>
-    //     </Form>
-    //   ) 
     const newModelGroupSelection = (
         <Grid className="add-model-group-page-content">
-                <Column md={4} lg={7} sm={4} className="add-model-group-page">
-                    <Form onSubmit={handleSubmit}>
+            <Column md={4} lg={7} sm={4} className="add-model-group-page">
+                <Form onSubmit={handleSubmit}>
                     <Stack gap={7}>
                         <TextInput
                         helperText="Enter Model Group Name (Mandatory)!"
-                        id="model_name"
+                        id="newModelGroup"
                         invalidText="Invalid error message."
                         labelText="Model Group Name:"
                         value={newModelGroupName}
@@ -113,19 +70,40 @@ const NewModelGroup = () => {
                         onChange={(e) => setNewModelGroupDesc(e.target.value)}
                         placeholder="ModelGroup1 will be added to add model and flow details!"
                         />
-                        <Button className="submit" kind="primary" tabIndex={0} >
+                        <Button className="newObject-button" kind="primary" tabIndex={0} type="submit">
                         Create Model Group
                         </Button>
                     </Stack>
-                    </Form>
-                </Column>
-                </Grid>
-      )   
+                </Form>
+            </Column>
+        </Grid>
+     )   
 
+    let modelGroupTable;
+    // if (isLoading) {
+    //     modelGroupTable = <p>Loading...</p>;
+    // } else if (isError) {
+    //     modelGroupTable = <p>{error.message}</p>;
+    // } else {
+    //     modelGroupTable = {newModelGroupSelection}
+    //     }
+    modelGroupTable = 
+        <Grid className="add-model-group-page" fullWidth>
+            <Column
+                lg={16}
+                md={8}
+                sm={4}
+                className="add-model-group-page__banner">
+                <h1 className="add-model-group-page__heading">
+                Model Group Creation Screen
+                </h1>
+            </Column>
+        </Grid>
     return (
         <div>
+            {modelGroupTable}
             {newModelGroupSelection}
         </div>
-    )
-}
+    );
+};
 export default NewModelGroup
