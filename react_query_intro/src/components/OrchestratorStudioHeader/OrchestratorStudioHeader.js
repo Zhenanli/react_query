@@ -91,7 +91,10 @@ class OrchestratorStudioHeader extends Component {
               <SideNavMenuItem href="/OrchestrationStudio/AddModelGroupPage">
                 Create Model Group
               </SideNavMenuItem>
-              <SideNavMenuItem href="/OrchestrationStudio/ManageModelGroupPage">
+              <SideNavMenuItem href="/OrchestrationStudio/ManageModelGroupsPage">
+                Manage Model Groups
+              </SideNavMenuItem>
+              <SideNavMenuItem href="/OrchestrationStudio/ManageModelGroup">
                 Manage Model Group
               </SideNavMenuItem>
             </SideNavMenu>

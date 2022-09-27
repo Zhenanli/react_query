@@ -5,39 +5,249 @@
       "modelGroupName": "default Model Group1",
       "modelGroupDesc": "default Model Group1 for Asset1",
       "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+      "savedBy": "Seema",
+      "Models": [
+        {
+          "id": "Model1",
+          "modelName": "Model1",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Image",
+          "fileName": "Image-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model2",
+          "modelName": "Model2",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Video",
+          "fileName": "Video-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "PDF",
+          "fileName": "PDF-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "WORD",
+          "fileName": "Word-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        }
+      ]
     },
     {
       "id": "Model Group1",
       "modelGroupName": "Model Group1",
       "modelGroupDesc": "Model Group1 for Asset1",
       "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+      "savedBy": "Seema",
+      "Models": [
+        {
+          "id": "Model1",
+          "modelName": "Model1",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Image",
+          "fileName": "Image-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model2",
+          "modelName": "Model2",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Video",
+          "fileName": "Video-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "PDF",
+          "fileName": "PDF-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "WORD",
+          "fileName": "Word-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        }
+      ]
     },
     {
       "id": "Model Group2",
       "modelGroupName": "Model Group2",
       "modelGroupDesc": "Model Group2 for Asset1",
       "createdDate": "26/8/2022",
-      "savedBy": "Seema"
+      "savedBy": "Seema",
+      "Models": [
+        {
+          "id": "Model1",
+          "modelName": "Model1",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Image",
+          "fileName": "Image-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model2",
+          "modelName": "Model2",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Video",
+          "fileName": "Video-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "PDF",
+          "fileName": "PDF-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "WORD",
+          "fileName": "Word-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        }
+      ]
     },
     {
       "id": "Model Group3",
       "modelGroupName": "Model Group3",
       "modelGroupDesc": "Model Group3 for Asset1",
       "createdDate": "26/8/2022",
-      "savedBy": "Seema"
-    },
-    {
-      "id": "asd",
-      "modelGroupName": "asd",
-      "modelGroupDesc": "ASDFG",
-      "createdDate": "25/9/2022",
-      "savedBy": "IBM Orchestrator"
+      "savedBy": "Seema",
+      "Models": [
+        {
+          "id": "Model1",
+          "modelName": "Model1",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Image",
+          "fileName": "Image-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model2",
+          "modelName": "Model2",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Video",
+          "fileName": "Video-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "PDF",
+          "fileName": "PDF-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model4",
+          "modelName": "Model4",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "WORD",
+          "fileName": "Word-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        }
+      ]
     },
     {
       "id": "MyModuleGroup",
       "modelGroupName": "MyModuleGroup",
+      "modelGroupDesc": "This module group will be added to a procedure.",
+      "createdDate": "25/9/2022",
+      "savedBy": "IBM Orchestrator",
+      "Models": [
+        {
+          "id": "Model1",
+          "modelName": "Model1",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Image",
+          "fileName": "Image-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model2",
+          "modelName": "Model2",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "Video",
+          "fileName": "Video-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model3",
+          "modelName": "Model3",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "PDF",
+          "fileName": "PDF-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        },
+        {
+          "id": "Model4",
+          "modelName": "Model4",
+          "createdDate": "26/8/2022",
+          "savedBy": "Seema",
+          "modelType": "WORD",
+          "fileName": "Word-File",
+          "filePath": "c://temp/model1",
+          "maxSize": "500 MB"
+        }
+      ]
+    },
+    {
+      "id": "MyModuleGroup1",
+      "modelGroupName": "MyModuleGroup1",
       "modelGroupDesc": "This module group will be added to a procedure.",
       "createdDate": "25/9/2022",
       "savedBy": "IBM Orchestrator"
