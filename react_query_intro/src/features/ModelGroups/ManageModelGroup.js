@@ -106,17 +106,28 @@ const ManageModelGroup = () => {
         console.log('Delete clicked', selectedRows);
       };
 
+    //   {
+    //     "id": "Model3",
+    //     "modelName": "Model3",
+    //     "createdDate": "26/8/2022",
+    //     "savedBy": "Seema",
+    //     "modelType": "PDF",
+    //     "fileName": "PDF-File",
+    //     "filePath": "c://temp/model1",
+    //     "maxSize": "500 MB"
+    //   },
       const handleModelCreation = (e) => {
+        console.log('handleModelCreation clicked', e);
         e.preventDefault()
-        addModelMutation.mutate(
+        addModelMutation.mutate(model_group_id,
             { 
                 id: newModelName,
                 modelName: newModelName,
                 createdDate: '25/9/2022',
                 savedBy: 'IBM Orchestrator',
-                modelType: "WORD",
-                fileName: "Word-File",
-                filePath: "c://temp/model1",
+                modelType: newModelType,
+                fileName: newModelFileName,
+                filePath: newModelFilePath,
                 maxSize: "500 MB"
             }
         )
@@ -163,7 +174,7 @@ const ManageModelGroup = () => {
               onChange={e => setNewModelFilePath(e.target.value)}
             />
             <TextInput
-              id="newModelFilePath"
+              id="newModelFileName"
               required
               warnText="Model File Name required"
               invalidText="Invalid error message."

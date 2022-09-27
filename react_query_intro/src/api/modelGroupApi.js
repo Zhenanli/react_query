@@ -27,8 +27,8 @@ export const getModelGroups = async () => {
     return response.data;
   }
 
-   export const addModel = async (model_group_id, model) => {
-    return await modelGroupApi.post(`/ModelGroups/${model_group_id}/Models`, model);
+   export const addModel = async (model_group_id,model) => {
+    return await modelGroupApi.post(`/ModelGroups/${model_group_id}/Models/`,model);
     };
     
     export const updateModel = async (model_group_id, model) => {
