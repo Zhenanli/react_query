@@ -34,6 +34,13 @@
       "modelGroupDesc": "ASDFG",
       "createdDate": "25/9/2022",
       "savedBy": "IBM Orchestrator"
+    },
+    {
+      "id": "MyModuleGroup",
+      "modelGroupName": "MyModuleGroup",
+      "modelGroupDesc": "This module group will be added to a procedure.",
+      "createdDate": "25/9/2022",
+      "savedBy": "IBM Orchestrator"
     }
   ],
   "Objects": [
@@ -56,12 +63,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -72,12 +93,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -96,12 +131,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -112,12 +161,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -136,12 +199,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -152,12 +229,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -184,12 +275,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -200,12 +305,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -224,12 +343,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -240,12 +373,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -264,12 +411,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -280,12 +441,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -312,12 +487,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -328,12 +517,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -352,12 +555,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -368,12 +585,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
@@ -392,12 +623,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             },
@@ -408,12 +653,26 @@
                 {
                   "id": "step1",
                   "insturction": " check insturction step 1",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 },
                 {
                   "id": "step2",
                   "insturction": " check insturction step 2",
-                  "labels": ["images", "videos", "vi", "ar", "comment", "count"]
+                  "labels": [
+                    "images",
+                    "videos",
+                    "vi",
+                    "ar",
+                    "comment",
+                    "count"
+                  ]
                 }
               ]
             }
