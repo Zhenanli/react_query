@@ -22,6 +22,7 @@ class OrchestrationStudio extends Component {
         <Theme>
           <OrchestratorStudioHeader />
           <Content>
+             {/* Model related pages */}
             <Routes>
               <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> />
               <Route
@@ -32,6 +33,7 @@ class OrchestrationStudio extends Component {
                 path="/ManageModelGroup"
                 element=<ManageModelGroup />
               />
+               {/* Object related pages */}
               <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route
                 path="/ManageProceduresPage"
