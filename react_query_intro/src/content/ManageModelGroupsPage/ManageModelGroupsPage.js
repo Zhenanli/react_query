@@ -4,7 +4,7 @@ import { Content, Theme } from '@carbon/react';
 import { Route, Switch } from 'react-router-dom';
 
 import ViewModelGroup from '../../content/ViewModelGroup';
-import ModelGroupsList from '../../features/ModelGroups/ModelGroupsList';
+import ManageModelGroups from '../../features/ModelGroups/ManageModelGroups';
 import {
   Link,
   Breadcrumb,
@@ -21,7 +21,7 @@ import {
 import { InfoSection, InfoCard } from '../../components/Info';
 import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { Form, Stack, TextInput } from '@carbon/react';
-import './_manage-model-group-page.scss';
+import './_manage-model-groups-page.scss';
 
 /*
 class ManageModelGroupPage extends Component{
@@ -89,7 +89,7 @@ class ManageModelPage extends Component{
 }
 */
 
-class ManageModelGroupPage extends Component {
+class ManageModelGroupsPage extends Component {
   render() {
     return (
       <>
@@ -101,11 +101,11 @@ class ManageModelGroupPage extends Component {
               sm={4}
               className="manage-model-group-page__banner">
               <h1 className="manage-model-group-page__heading">
-                Manage Model Group Screen
+                Manage Model Groups Screen
               </h1>
             </Column>
           </Grid>
-          <ModelGroupsList />
+          <ManageModelGroups />
         </Theme>
         <Content>
           <Button kind="primary" tabIndex={0} type="submit">
@@ -123,4 +123,4 @@ class ManageModelGroupPage extends Component {
   }
 }
 
-export default ManageModelGroupPage;
+export default ManageModelGroupsPage;

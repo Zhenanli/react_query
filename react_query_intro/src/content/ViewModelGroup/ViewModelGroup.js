@@ -3,7 +3,7 @@ import { Button, DataTable } from '@carbon/react';
 import { iconDownload, iconEdit, iconOpen } from '@carbon/icons';
 import './_view-model-group.scss';
 
-import modelGroupRows from '../../features/ModelGroups/ModelGroupsList';
+import modelGroupRows from '../../features/ModelGroups/ManageModelGroups';
 
 //import { action } from '@storybook/addon-actions';
 const {

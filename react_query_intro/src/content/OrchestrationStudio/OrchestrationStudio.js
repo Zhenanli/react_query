@@ -5,13 +5,17 @@ import { Content, Theme } from '@carbon/react';
 import OrchestratorStudioHeader from '../../components/OrchestratorStudioHeader';
 import { Route, Routes } from 'react-router-dom';
 import AddModelGroupPage from '../../content/AddModelGroupPage';
-import ManageModelGroupPage from '../../content/ManageModelGroupPage';
+import ManageModelGroupsPage from '../../content/ManageModelGroupsPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
 import ManageObjectsPage from '../ManageObjectsPage/ManageObjectsPage';
 import ManageProceduresPage from '../ManageProceduresPage/ManageProceduresPage';
 
 import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
+<<<<<<< HEAD
 import ManageProcedurePage from '../ManageProcedurePage';
+=======
+import ManageModelGroup from '../../features/ModelGroups/ManageModelGroup';
+>>>>>>> 7c546359d0bafbf9d195330d24e9741c8f02644c
 
 class OrchestrationStudio extends Component {
   render() {
@@ -23,8 +27,12 @@ class OrchestrationStudio extends Component {
             <Routes>
               <Route path="/AddModelGroupPage" element=<AddModelGroupPage /> />
               <Route
-                path="/ManageModelGroupPage"
-                element=<ManageModelGroupPage />
+                path="/ManageModelGroupsPage"
+                element=<ManageModelGroupsPage />
+              />
+              <Route
+                path="/ManageModelGroup"
+                element=<ManageModelGroup />
               />
               <Route path="/ManageObjectsPage" element=<ManageObjectsPage /> />
               <Route

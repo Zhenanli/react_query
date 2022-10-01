@@ -69,7 +69,7 @@ const headers = [
     },
   ];
 
-  const ModelGroupsList = () => {
+  const ManageModelGroups = () => {
     const queryClient = useQueryClient()
 
     const {isLoading,isError,error, data: ModelGroups} = useQuery(
@@ -179,5 +179,5 @@ const headers = [
         </div>
     );
 };
-export default ModelGroupsList
+export default ManageModelGroups
 
