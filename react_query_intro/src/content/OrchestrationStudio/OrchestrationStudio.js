@@ -9,8 +9,13 @@ import ManageModelGroupsPage from '../../content/ManageModelGroupsPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
 import ManageObjectsPage from '../ManageObjectsPage/ManageObjectsPage';
 import ManageProceduresPage from '../ManageProceduresPage/ManageProceduresPage';
+
 import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
+<<<<<<< HEAD
+import ManageProcedurePage from '../ManageProcedurePage';
+=======
 import ManageModelGroup from '../../features/ModelGroups/ManageModelGroup';
+>>>>>>> 7c546359d0bafbf9d195330d24e9741c8f02644c
 
 class OrchestrationStudio extends Component {
   render() {
@@ -34,7 +39,7 @@ class OrchestrationStudio extends Component {
                 path="/ManageProceduresPage"
                 element=<ManageProceduresPage />
               />
-              <Route path="/AddProcedurePage" element=<AddProcedurePage /> />
+              <Route path="/ManageProcedurePage" element=<ManageProcedurePage /> />
             </Routes>
           </Content>
         </Theme>
