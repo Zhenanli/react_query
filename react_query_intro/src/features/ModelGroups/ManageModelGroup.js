@@ -67,7 +67,7 @@ const ManageModelGroup = () => {
       );
 
     //   const { isLoading, isError, error, data: model_groups } = useQuery(
-    //     'ModelGroups',
+    //     'Models',
     //     () => getModel(model_group_id, model_id),
     //     {
     //       select: data => data.sort(a => a.id),
@@ -77,21 +77,21 @@ const ManageModelGroup = () => {
     const addModelMutation = useMutation(addModel, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroups")
+            queryClient.invalidateQueries("Models")
         }
     })
 
     const updateModelMutation = useMutation(updateModel, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroups")
+            queryClient.invalidateQueries("Models")
         }
     })
 
     const deleteModelMutation = useMutation(deleteModel, {
         onSuccess: () => {
             // Invalidates cache and refetch 
-            queryClient.invalidateQueries("ModelGroups")
+            queryClient.invalidateQueries("Models")
         }
     })
 
