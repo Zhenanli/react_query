@@ -7,15 +7,13 @@ import { Route, Routes } from 'react-router-dom';
 import AddModelGroupPage from '../../content/AddModelGroupPage';
 import ManageModelGroupsPage from '../../content/ManageModelGroupsPage';
 import AddProcedurePage from '../../content/AddProcedurePage';
-import ManageObjectsPage from '../ManageObjectsPage/ManageObjectsPage';
-import ManageProceduresPage from '../ManageProceduresPage/ManageProceduresPage';
 
 import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
-<<<<<<< HEAD
-import ManageProcedurePage from '../ManageProcedurePage';
-=======
 import ManageModelGroup from '../../features/ModelGroups/ManageModelGroup';
->>>>>>> 7c546359d0bafbf9d195330d24e9741c8f02644c
+
+import ManageObjectsPage from '../ManageObjectsPage/ManageObjectsPage';
+import ManageProceduresPage from '../ManageProceduresPage/ManageProceduresPage';
+import ManageProcedurePage from '../ManageProcedurePage';
 
 class OrchestrationStudio extends Component {
   render() {
