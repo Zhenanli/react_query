@@ -1,8 +1,8 @@
 import axios from "axios"
 
 const modelGroupApi = axios.create({
-    baseURL: 'http://localhost:3500',
-    // baseURL: 'https://0ffbf397-9bc4-4e51-a6e9-f079df33d632.mock.pstmn.io',
+    // baseURL: 'http://localhost:3500',
+    baseURL: 'https://0ffbf397-9bc4-4e51-a6e9-f079df33d632.mock.pstmn.io',
 })
 
 export const getModelGroups = async () => {
