@@ -251,6 +251,13 @@
       "modelGroupDesc": "This module group will be added to a procedure.",
       "createdDate": "25/9/2022",
       "savedBy": "IBM Orchestrator"
+    },
+    {
+      "id": "MyModuleGroup2",
+      "modelGroupName": "MyModuleGroup2",
+      "modelGroupDesc": "This module group will be added to a procedure.",
+      "createdDate": "25/9/2022",
+      "savedBy": "IBM Orchestrator"
     }
   ],
   "Objects": [
