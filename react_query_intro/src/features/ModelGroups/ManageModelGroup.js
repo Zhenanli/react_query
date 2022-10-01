@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
-import { getModelGroup, addModel, getModel, updateModel, deleteModel } from "../../api/modelGroupApi"
+import { getModelGroup, addModel, getModels, updateModel, deleteModel } from "../../api/orchestratorApi"
 
 import { useState } from 'react'
 
@@ -11,6 +11,8 @@ import { Button, DataTable, Form, Stack, TextInput,TableContainer,TableToolbar,T
     TableHeader,
     TableSelectAll,
     TableSelectRow,
+    RadioButtonGroup,
+    RadioButton,
     Grid,
     Column} from '@carbon/react';
 
@@ -55,13 +57,10 @@ const ManageModelGroup = () => {
     const queryClient = useQueryClient()
     const [success, setSuccess] = useState(false);
     
-    // const id = 'default'
-    // const {isLoading,isError,error, data: default_ModelGroup} = useQuery(["ModelGroups", { id }], (id) =>
-    //     getModelGroup(id))
     const model_group_id = 'MyModuleGroup';
-    const { isLoading, isError, error, data: model_group } = useQuery(
+    const { isLoading, isError, error, data: Models } = useQuery(
         'ModelGroups',
-        () => getModelGroup(model_group_id),
+        () => getModels(model_group_id),
         {
           //select: data => data.sort(a => a.id),
         }
@@ -131,6 +130,7 @@ const ManageModelGroup = () => {
                 maxSize: "500 MB"
             }
         )
+        console.log(newModelName);
         setNewModelName('')
         setNewModelFileName('')
         setNewModelFilePath('')
@@ -155,15 +155,30 @@ const ManageModelGroup = () => {
               value={newModelName}
               onChange={e => setNewModelName(e.target.value)}
             />
-            <TextInput
-              id="newModelType"
-              required
-              warnText="Model Type required"
-              invalidText="Invalid error message."
-              labelText="Key in Model Type to create new one"
-              value={newModelType}
-              onChange={e => setNewModelType(e.target.value)}
-            />
+            <RadioButtonGroup
+                legendText="Model type"
+                name="radio-button-group"
+                legend="Model type Legend"
+                defaultSelected="image-1">
+                <RadioButton
+                  labelText="Image"
+                  value="image-1"
+                  id="image-1"                  
+                  onChange={e => setNewModelType(e.target.value)}
+                />
+                <RadioButton
+                  labelText="Video"
+                  value="video-2"
+                  id="video-2"
+                  onChange={e => setNewModelType(e.target.value)}
+                />
+                <RadioButton
+                  labelText="AR"
+                  value="ar-3"
+                  id="ar-3"
+                  onChange={e => setNewModelType(e.target.value)}
+                />
+            </RadioButtonGroup>
             <TextInput
               id="newModelFilePath"
               required
@@ -199,10 +214,10 @@ const ManageModelGroup = () => {
       } else if (isError) {
         modelsTable = <p>{error.message}</p>;
       } else {
-        // objectTable = <p> loaded success</p>
         modelsTable = (
           <DataTable
-            rows={model_group["Models"]}
+            /*rows={model_group["Models"]}*/
+            rows={Models}
             headers={headers}
             render={({
               rows,

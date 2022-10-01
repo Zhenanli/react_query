@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Content, Theme } from '@carbon/react';
 import { Route, Switch } from 'react-router-dom';
 //import ModelGroupRepoPage from '../../content/ModelGroupRepoPage';
+import NewModelGroup from '../../features/ModelGroups/NewModelGroup'
 import {
   Link,
   DataTableSkeleton,
@@ -20,12 +21,11 @@ import { Form, Stack, TextInput } from '@carbon/react';
 import './_add-model-group-page.scss';
 
 import { useQuery, useMutation, useQueryClient } from "react-query"
-import { addModelGroup } from "../../api/modelGroupApi"
+import { addModelGroup } from "../../api/orchestratorApi"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react'
-import NewModelGroup from '../../features/ModelGroups/NewModelGroup';
 
 // class AddModelGroupPage extends Component {
 //   render() {

@@ -3,7 +3,7 @@ import {
     getModelGroups,
     updateModelGroup,
     deleteModelGroup 
-} from "../../api/modelGroupApi"
+} from "../../api/orchestratorApi"
 
 import { useState } from 'react';
 

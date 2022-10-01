@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
-import { addModelGroup, getModelGroup, addModel, getModel, updateModel, deleteModel } from "../../api/modelGroupApi"
+import { addModelGroup, getModelGroup, addModel, getModel, updateModel, deleteModel } from "../../api/orchestratorApi"
 
 import { useState } from 'react'
 

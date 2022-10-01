@@ -62,7 +62,7 @@ export const getProcedures = async ({objectid}) => {
   }
 
   export const getModels = async (model_group_id) => {
-    const response = await orchestratorApi.get(`/ModelGroups/${model_group_id}`, model_group_id);
+    const response = await orchestratorApi.get(`/ModelGroups/${model_group_id}/Models`, model_group_id);
     return response.data;
   }
 
