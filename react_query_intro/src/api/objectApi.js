@@ -22,4 +22,9 @@ export const deleteObject = async ({ id }) => {
   return await objectsApi.delete(`/objects/${id}`, id);
 };
 
+export const getProcedures = async ({objectid}) => {
+  const response = await objectsApi.get(`/objects/${objectid}/procedures`, objectid);
+  return response.data;
+};
+
 export default objectsApi;

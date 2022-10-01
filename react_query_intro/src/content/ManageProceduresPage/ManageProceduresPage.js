@@ -4,10 +4,16 @@ import { iconDownload, iconEdit, iconOpen } from '@carbon/icons';
 import './_manage-procedures.scss';
 import ProcedureList from '../../features/Objects/ProcedureList';
 
+
+const handleNewprocedure = (objectid) => {
+console.log(objectid)
+}
+
 class ManageProceduresPage extends React.Component {
   handleSelectAll = selectAll => () => {
     selectAll();
   };
+
   render() {
     return (
       <>
@@ -22,20 +28,13 @@ class ManageProceduresPage extends React.Component {
                 Managing Procedures
               </h1>
             </Column>
+            
           </Grid>
-          {/* <ProcedureList /> */}
+          <ProcedureList objectid="Object1" />
+          <Button kind='primary' onClick = {() => handleNewprocedure("Object1")}>
+                Add New Procedure
+              </Button>
         </Theme>
-        {/* <Content>
-          <Button kind="primary" tabIndex={0} type="submit">
-            Delete Selected
-          </Button>
-          <Button kind="primary" tabIndex={1} type="submit">
-            Edit Selected
-          </Button>
-          <Button kind="primary" tabIndex={2} type="submit">
-            Open Selected
-          </Button>
-        </Content> */}
       </>
     );
   }

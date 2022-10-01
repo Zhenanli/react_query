@@ -1,10 +1,10 @@
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import {
   getProcedures,
-  addProcedure,
-  updateProcedure,
-  deleteProcedure,
-} from '../../api/procedureApi';
+  // addProcedure,
+  // updateProcedure,
+  // deleteProcedure,
+} from '../../api/objectApi';
 
 import { useState } from 'react';
 
@@ -14,7 +14,7 @@ import {
   DataTable,
   Form,
   Stack,
-  TextInput,
+  Dropdown,
   // TableContainer, TableToolbar, TableBody, TableToolbarMenu, TableBatchAction, TableBatchActions, TableToolbarAction, TableToolbarContent, TableToolbarSearch, Table,
   // TableHead,
   // TableRow,
@@ -70,6 +70,9 @@ const ProcedureList = objectid => {
   const [newProcedure, setNewProcedure] = useState('');
   const queryClient = useQueryClient();
 
+  const items = [{ "id": 'option-0', "text": 'Object1' }, { "id": 'option-1', "text": 'Object2' }, { "id": 'option-2', "text": 'Object3' }]
+
+
   const { isLoading, isError, error, data: procedures } = useQuery(
     'procedures',
     () => getProcedures(objectid),
@@ -78,36 +81,36 @@ const ProcedureList = objectid => {
     }
   );
 
-  const addProcedureMutation = useMutation(addProcedure, {
-    onSuccess: () => {
-      // Invalidates cache and refetch
-      queryClient.invalidateQueries('procedures');
-    },
-  });
+  // const addProcedureMutation = useMutation(addProcedure, {
+  //   onSuccess: () => {
+  //     // Invalidates cache and refetch
+  //     queryClient.invalidateQueries('procedures');
+  //   },
+  // });
 
-  const updateProcedureMutation = useMutation(updateProcedure, {
-    onSuccess: () => {
-      // Invalidates cache and refetch
-      queryClient.invalidateQueries('procedures');
-    },
-  });
+  // const updateProcedureMutation = useMutation(updateProcedure, {
+  //   onSuccess: () => {
+  //     // Invalidates cache and refetch
+  //     queryClient.invalidateQueries('procedures');
+  //   },
+  // });
 
-  const deleteProcedureMutation = useMutation(deleteProcedure, {
-    onSuccess: () => {
-      // Invalidates cache and refetch
-      queryClient.invalidateQueries('procedures');
-    },
-  });
+  // const deleteProcedureMutation = useMutation(deleteProcedure, {
+  //   onSuccess: () => {
+  //     // Invalidates cache and refetch
+  //     queryClient.invalidateQueries('procedures');
+  //   },
+  // });
 
   const handleSubmit = e => {
-    e.preventDefault();
-    addProcedureMutation.mutate({
-      id: newProcedure,
-      procedureName: newProcedure,
-      createdDate: Date().toLocaleDateString(),
-      savedBy: 'user1',
-    });
-    setNewProcedure('');
+    // e.preventDefault();
+    // addProcedureMutation.mutate({
+    //   id: newProcedure,
+    //   procedureName: newProcedure,
+    //   createdDate: Date().toLocaleDateString(),
+    //   savedBy: 'user1',
+    // });
+    // setNewProcedure('');
   };
 
   const batchActionOpenClick = selectedRows => {
@@ -121,26 +124,36 @@ const ProcedureList = objectid => {
   };
 
   const newItemSection = (
-    <Form onSubmit={handleSubmit}>
-      <Stack>
-        <TextInput
-          id="newProcedureName"
-          required
-          warnText="Procedure name required"
-          invalidText="Invalid error message."
-          labelText="Key in new procedure name to create new one"
-          value={newProcedure}
-          onChange={e => setNewProcedure(e.target.value)}
-        />
-        <Button
-          className="newProcedure-button"
-          kind="primary"
-          tabIndex={0}
-          type="submit">
-          Create new procedure
-        </Button>
-      </Stack>
-    </Form>
+    // <Form onSubmit={handleSubmit}>
+    //   <Stack>
+    //     <TextInput
+    //       id="newProcedureName"
+    //       required
+    //       warnText="Procedure name required"
+    //       invalidText="Invalid error message."
+    //       labelText="Key in new procedure name to create new one"
+    //       value={newProcedure}
+    //       onChange={e => setNewProcedure(e.target.value)}
+    //     />
+    //     <Button
+    //       className="newProcedure-button"
+    //       kind="primary"
+    //       tabIndex={0}
+    //       type="submit">
+    //       Create new procedure
+    //     </Button>
+    //   </Stack>
+    // </Form>
+    <div style={{ width: 400 }}>
+      <Dropdown
+        id="objectslist-dropdown"
+        titleText="Select Objects"
+        helperText=" "
+        label="Dropdown menu options"
+        items={items}
+        itemToString={item => (item ? item.text : '')}
+      />
+    </div>
   );
 
   let procedureTable;
@@ -221,9 +234,9 @@ const ProcedureList = objectid => {
   return (
     <div>
       {/* <h1>Procedure List</h1> */}
-
-      {procedureTable}
       {newItemSection}
+      {procedureTable}
+
       {/* {procedures} */}
     </div>
   );
